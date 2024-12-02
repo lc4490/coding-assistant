@@ -246,6 +246,7 @@ if project:
         repo_name = project.split("/")[-1]  # Extract repository name from URL
         repo_path = f"./{repo_name}"  # Use a relative path
         shutil.rmtree(repo_path)
+        st.session_state.messages = []
         
     # chatbot
     if "messages" not in st.session_state:
